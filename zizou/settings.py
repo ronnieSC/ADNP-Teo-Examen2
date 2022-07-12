@@ -25,7 +25,7 @@ SECRET_KEY = '6%y*+mg7qa(j4h!l&y-r^$%qla00f6jm^ci46=0&a+ic&c(8dz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['adnpexamen2.pythonanywhere.com']
+ALLOWED_HOSTS = ['adnpexamen2.pythonanywhere.com', '*']
 
 
 # Application definition
