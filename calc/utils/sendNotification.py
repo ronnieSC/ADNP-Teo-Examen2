@@ -45,21 +45,21 @@ def _send_fcm_message(fcm_message):
         print(resp.text)
 
 
-def _build_common_message(a, b, r):
-    body = f"{a} + {b} = {r}"
+def _build_common_message(message):
+    body = message
     return {
         'message': {
             'topic': 'exam2',
             'notification': {
-                'title': 'Resultado de suma',
+                'title': 'Reporte de accidente',
                 'body': body
             }
         }
     }
 
 
-def sendSumNotification(a, b, r):
-    common_message = _build_common_message(a, b, r)
+def sendSumNotification(message):
+    common_message = _build_common_message(message)
     print('FCM request body for message using common notification object:')
     print(json.dumps(common_message, indent=2))
     _send_fcm_message(common_message)

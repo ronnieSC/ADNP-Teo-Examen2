@@ -10,17 +10,9 @@ def home(request):
 
 def operation(request):
 
-	res = 0
+	message = request.POST['mensaje']
 
-	val1 = int(request.POST['num1'])
-	val2 = int(request.POST['num2'])
-
-	operador = request.POST['operacion']
-	if operador == "sumar":
-		res = val1 + val2
-		sendSumNotification(val1, val2, res)
-	if operador == "multiplicar":
-		res = val1 * val2
+	sendSumNotification(message)
 
 
-	return render(request, 'result.html', {'resultado': res})
+	return render(request, 'result.html', {'resultado': message})
